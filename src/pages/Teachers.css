@@ -1,0 +1,128 @@
+.teachers {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.teachers-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(31, 111, 139, 0.14), rgba(18, 59, 85, 0.08));
+  border: 1px solid rgba(31, 111, 139, 0.14);
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #1f6f8b;
+}
+
+.teachers h1 {
+  margin: 0 0 0.45rem;
+  color: #123b55;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-copy {
+  margin: 0;
+  color: #44627a;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.hero-status {
+  min-width: 200px;
+  padding: 0.9rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 24px rgba(18, 59, 85, 0.08);
+}
+
+.hero-status span {
+  display: block;
+  font-size: 0.78rem;
+  color: #6d8090;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.3rem;
+}
+
+.hero-status strong {
+  color: #123b55;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1f6f8b, #123b55);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d6984, #0f3147);
+}
+
+.btn-secondary {
+  background: #e7edf3;
+  color: #123b55;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef6b6b, #d94444);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ea5b5b, #c83b3b);
+}
+
+@media (max-width: 768px) {
+  .teachers-hero {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions .btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .teachers {
+    padding: 1.5rem 0;
+  }
+}

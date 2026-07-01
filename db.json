@@ -1,0 +1,60 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "studentId": "student-001",
+      "name": "Ava Thompson",
+      "email": "ava.thompson@brighton.edu",
+      "phone": "+1 555 0102",
+      "class": "Grade 10",
+      "address": "12 River Street"
+    },
+    {
+      "id": 2,
+      "studentId": "student-002",
+      "name": "Noah Bennett",
+      "email": "noah.bennett@brighton.edu",
+      "phone": "+1 555 0103",
+      "class": "Grade 11",
+      "address": "40 Oak Avenue"
+    },
+    {
+      "id": 3,
+      "studentId": "student-003",
+      "name": "Mia Rodriguez",
+      "email": "mia.rodriguez@brighton.edu",
+      "phone": "+1 555 0104",
+      "class": "Grade 9",
+      "address": "25 Pine Road"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "teacherId": "teacher-001",
+      "name": "Ms. Grace Lewis",
+      "email": "grace.lewis@brighton.edu",
+      "phone": "+1 555 0202",
+      "subject": "Mathematics",
+      "qualification": "M.Ed in Mathematics"
+    },
+    {
+      "id": 2,
+      "teacherId": "teacher-002",
+      "name": "Mr. Daniel Brooks",
+      "email": "daniel.brooks@brighton.edu",
+      "phone": "+1 555 0203",
+      "subject": "Science",
+      "qualification": "B.Sc, PGCE"
+    },
+    {
+      "teacherId": "Kuldip_123",
+      "name": "Kuldip sah",
+      "email": "abc@gamil.com",
+      "phone": "82358028528",
+      "subject": "math",
+      "qualification": "bbs",
+      "id": 3
+    }
+  ]
+}

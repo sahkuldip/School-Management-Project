@@ -1,0 +1,302 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at top left, rgba(46, 204, 113, 0.22), transparent 32%),
+    linear-gradient(180deg, #0f2740 0%, #123b55 55%, #0b1f32 100%);
+  color: #f6f8fb;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 18px 0 40px rgba(11, 31, 50, 0.18);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(215, 243, 226, 0.35) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(215, 243, 226, 0.3);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.sidebar__brand {
+  display: grid;
+  gap: 1rem;
+}
+
+.sidebar__photo {
+  position: relative;
+  display: block;
+  min-height: 190px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  background:
+    linear-gradient(180deg, rgba(13, 34, 54, 0.12), rgba(13, 34, 54, 0.78)),
+    var(--sidebar-photo) center/cover;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transform: translateY(0);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.sidebar__photo:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16), 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar__photo::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4));
+}
+
+.sidebar__photo-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  padding: 1rem;
+  display: grid;
+  gap: 0.35rem;
+  color: #fff;
+}
+
+.sidebar__photo-icon,
+.sidebar__link-icon,
+.sidebar__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #d7f3e2;
+}
+
+.sidebar__photo-icon {
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+}
+
+.sidebar__photo-overlay span {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d7f3e2;
+}
+
+.sidebar__photo-overlay strong {
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.sidebar__identity {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sidebar__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8fd7bc;
+}
+
+.sidebar__identity h1 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.sidebar__identity p {
+  color: rgba(246, 248, 251, 0.78);
+}
+
+.sidebar__tagline {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.sidebar__nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.95rem;
+  color: rgba(246, 248, 251, 0.88);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.sidebar__link::after {
+  content: '›';
+  margin-left: auto;
+  color: rgba(215, 243, 226, 0.8);
+}
+
+.sidebar__link-icon {
+  font-size: 0.95rem;
+  flex: 0 0 auto;
+}
+
+.sidebar__link:hover,
+.sidebar__link--active {
+  background: rgba(46, 204, 113, 0.16);
+  border-color: rgba(143, 215, 188, 0.24);
+  transform: translateX(4px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.sidebar__card {
+  margin-top: auto;
+  padding: 1rem 1rem 1.1rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.sidebar__card-icon {
+  margin-bottom: 0.55rem;
+  font-size: 1rem;
+}
+
+.sidebar__card-label {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(46, 204, 113, 0.18);
+  color: #d7f3e2;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sidebar__card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.sidebar__card p {
+  color: rgba(246, 248, 251, 0.76);
+}
+
+.sidebar__close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.sidebar__close:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .sidebar__nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar__card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(86vw, 320px);
+    max-width: 320px;
+    height: 100vh;
+    transform: translateX(-110%);
+    border-right: 0;
+    border-bottom: 0;
+    padding: 1.25rem;
+    box-shadow: 18px 0 60px rgba(11, 31, 50, 0.28);
+    background:
+      radial-gradient(circle at top left, rgba(46, 204, 113, 0.22), transparent 32%),
+      linear-gradient(180deg, #0f2740 0%, #123b55 55%, #0b1f32 100%);
+    z-index: 1002;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+  }
+
+  .sidebar__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar__nav {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar__card {
+    padding: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .sidebar__brand {
+    gap: 0.85rem;
+  }
+
+  .sidebar__photo {
+    min-height: 160px;
+  }
+
+  .sidebar__identity h1 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar__link {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .sidebar__card {
+    padding: 0.9rem;
+  }
+}
